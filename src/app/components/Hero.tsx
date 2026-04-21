@@ -1,0 +1,181 @@
+import { motion } from "motion/react";
+import { Headphones, MessageCircle, Play, Sparkles } from "lucide-react";
+import AppScreen from "../../imports/App_screenshots_1.png";
+
+export function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 px-6">
+      {/* Blurred gradient backgrounds */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.2 }}
+          className="absolute top-20 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-[#72D8FF]/30 to-[#5A8BFF]/20 rounded-full blur-[120px]"
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.4 }}
+          className="absolute top-0 right-0 w-[700px] h-[700px] bg-gradient-to-bl from-[#72D8FF]/40 via-[#47B8F5]/30 to-transparent rounded-full blur-[100px]"
+        />
+      </div>
+
+      <div className="relative max-w-[1400px] w-full grid md:grid-cols-2 gap-12 items-center">
+        {/* Left: Text Content */}
+        <div className="space-y-8">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="inline-block"
+          >
+            <div className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-[#47B8F5]/20 shadow-sm">
+              <span className="text-sm font-semibold bg-gradient-to-r from-[#47B8F5] to-[#5A8BFF] bg-clip-text text-transparent">
+                4800+ живых разговорных фраз
+              </span>
+            </div>
+          </motion.div>
+
+          <motion.h1
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-5xl md:text-6xl font-extrabold leading-tight text-[#1E2430]"
+          >
+            RememBeary — учи английский{" "}
+            <span className="bg-gradient-to-r from-[#72D8FF] to-[#5A8BFF] bg-clip-text text-transparent">
+              легко, естественно, с удовольствием
+            </span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-lg text-[#667085] leading-relaxed max-w-[600px] space-y-4"
+          >
+            <p>
+              RememBeary — это первый тренажёр, который работает по тому же принципу, по которому маленькие дети учат свой родной язык — через повторение и подражание.
+            </p>
+            <p>
+              Они не зубрят времена и не делают тесты. Они просто слушают, как говорят родители, и повторяют за ними.
+            </p>
+            <p className="font-bold text-[#1E2430]">
+              Вставь наушники, выйди на прогулку и уже через 20 минут почувствуешь:{" "}
+              <span className="bg-gradient-to-r from-[#72D8FF] to-[#5A8BFF] bg-clip-text text-transparent">
+                «Чёрт, да у меня получается!»
+              </span>
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-wrap gap-4"
+          >
+            <motion.a
+              href="#download"
+              whileHover={{ scale: 1.05, boxShadow: "0 12px 40px rgba(71, 184, 245, 0.4)" }}
+              whileTap={{ scale: 0.95 }}
+              className="w-[260px] py-[18px] bg-gradient-to-r from-[#72D8FF] to-[#5A8BFF] text-white rounded-full font-bold text-lg shadow-[0_8px_32px_rgba(71,184,245,0.35)] transition-all duration-300 text-center"
+            >
+              Скачать приложение
+            </motion.a>
+            <motion.a
+              href="#try"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-[260px] py-[18px] bg-white text-[#47B8F5] rounded-full font-bold text-lg shadow-[0_4px_20px_rgba(32,50,74,0.15)] border border-[#47B8F5]/20 transition-all duration-300 text-center"
+            >
+              Попробовать бесплатно
+            </motion.a>
+          </motion.div>
+
+          <motion.p
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-sm text-[#667085] flex items-center gap-2"
+          >
+            <Sparkles className="w-4 h-4 text-[#15D38A]" />5 полноценных пробных блоков · 125 озвученных фраз · без
+            подписки на старте
+          </motion.p>
+        </div>
+
+        {/* Right: Phone Mockup with Floating Elements */}
+        <motion.div
+          initial={{ y: 50, opacity: 0, scale: 0.9 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="relative flex justify-center"
+        >
+          {/* Phone */}
+          <div className="relative z-10">
+            <motion.img
+              src={AppScreen}
+              alt="RememBeary App"
+              className="w-full max-w-[320px] drop-shadow-[0_20px_60px_rgba(32,50,74,0.3)]"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </div>
+
+          {/* Floating Decorative Elements */}
+          <FloatingElement delay={0.8} x={-210} y={-90} rotate={-15}>
+            <div className="p-4 bg-white rounded-2xl shadow-[0_8px_32px_rgba(32,50,74,0.2)]">
+              <Headphones className="w-6 h-6 text-[#47B8F5]" />
+            </div>
+          </FloatingElement>
+
+          <FloatingElement delay={1} x={210} y={-130} rotate={12}>
+            <div className="p-4 bg-white rounded-2xl shadow-[0_8px_32px_rgba(32,50,74,0.2)]">
+              <MessageCircle className="w-6 h-6 text-[#B9A7FF]" />
+            </div>
+          </FloatingElement>
+
+          <FloatingElement delay={1.2} x={-210} y={170} rotate={8}>
+            <div className="p-4 bg-gradient-to-br from-[#15D38A] to-[#72D8FF] rounded-2xl shadow-[0_8px_32px_rgba(21,211,138,0.3)]">
+              <Play className="w-6 h-6 text-white" />
+            </div>
+          </FloatingElement>
+
+          <FloatingElement delay={1.4} x={140} y={240} rotate={0}>
+            <div className="px-5 py-3 bg-gradient-to-r from-[#15D38A] to-[#47B8F5] rounded-2xl shadow-[0_12px_40px_rgba(21,211,138,0.4)]">
+              <span className="text-sm font-bold text-white">+5 уроков бесплатно</span>
+            </div>
+          </FloatingElement>
+
+          <FloatingElement delay={1.6} x={200} y={60} rotate={5}>
+            <div className="w-12 h-12 bg-gradient-to-br from-[#FF5C77] to-[#FFC58F] rounded-full shadow-[0_8px_24px_rgba(255,92,119,0.3)]" />
+          </FloatingElement>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+interface FloatingElementProps {
+  children: React.ReactNode;
+  delay: number;
+  x: number;
+  y: number;
+  rotate: number;
+}
+
+function FloatingElement({ children, delay, x, y, rotate }: FloatingElementProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0, x: 0, y: 0 }}
+      animate={{ opacity: 1, scale: 1, x, y }}
+      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+      style={{ rotate }}
+    >
+      <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
+        {children}
+      </motion.div>
+    </motion.div>
+  );
+}
