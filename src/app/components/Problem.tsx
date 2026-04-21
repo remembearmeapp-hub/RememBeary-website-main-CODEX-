@@ -1,6 +1,6 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import BearConfused from "../../imports/BearConfused_New.png";
+import BearConfused from "../../imports/BearConfused_Compressed.png";
 
 export function Problem() {
   const ref = useRef(null);
@@ -96,7 +96,7 @@ export function Problem() {
 
                 <div className="space-y-5">
                   <p className="text-[19px] text-[#667085] leading-relaxed font-normal opacity-90">
-                    Классические приложения и курсы учат{" "}
+                    Дело в том, что классические приложения и курсы в основном учат{" "}
                     <span className="font-bold text-[#1E2430]">читать и писать</span>. А говорить они практически не
                     учат.
                   </p>
