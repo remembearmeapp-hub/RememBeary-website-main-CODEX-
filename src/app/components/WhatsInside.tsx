@@ -17,52 +17,52 @@ export function WhatsInside() {
 
   const features = [
     {
-      icon: <MessageSquare className="w-7 h-7" />,
+      icon: <MessageSquare className="w-7 h-7" strokeWidth={2.4} />,
       title: "4800+ нужных фраз",
       description: "Фразы, которые реально нужны для повседневного общения",
-      color: "from-[#47B8F5] to-[#5A8BFF]",
+      color: "from-[#55B8FF] to-[#4E7FFF]",
     },
     {
-      icon: <Headphones className="w-7 h-7" />,
+      icon: <Headphones className="w-7 h-7" strokeWidth={2.4} />,
       title: "Готовые конструкции",
       description: "Для повседневной жизни, бытовых ситуаций и работы",
-      color: "from-[#9D85FF] to-[#72D8FF]",
+      color: "from-[#9B7BFF] to-[#6F9BFF]",
     },
     {
-      icon: <GraduationCap className="w-7 h-7" />,
+      icon: <GraduationCap className="w-7 h-7" strokeWidth={2.4} />,
       title: "Профессиональные блоки",
       description: "Для таксистов, строителей, ремонтников и других профессий",
-      color: "from-[#00D981] to-[#47B8F5]",
+      color: "from-[#21D3A0] to-[#21B8CF]",
     },
     {
-      icon: <BookOpen className="w-7 h-7" />,
+      icon: <BookOpen className="w-7 h-7" strokeWidth={2.4} />,
       title: "Фразы выживания",
       description: "Банк, больница, Walmart, аптека и другие важные места",
-      color: "from-[#FF9E5E] to-[#FF5C77]",
+      color: "from-[#FFA06A] to-[#FF6B82]",
     },
     {
-      icon: <Lightbulb className="w-7 h-7" />,
+      icon: <Lightbulb className="w-7 h-7" strokeWidth={2.4} />,
       title: "3000+ нужных слов",
       description: "Ты учишь их сразу в живых фразах, а не отдельными словами",
-      color: "from-[#FF4D6D] to-[#B9A7FF]",
+      color: "from-[#F45E9C] to-[#B56DFF]",
     },
     {
-      icon: <Briefcase className="w-7 h-7" />,
+      icon: <Briefcase className="w-7 h-7" strokeWidth={2.4} />,
       title: "Грамматика в цвете",
       description: "Красивая и понятная грамматика, чтобы видеть логику языка",
-      color: "from-[#2094F3] to-[#15D38A]",
+      color: "from-[#19A7FF] to-[#08C79A]",
     },
     {
-      icon: <Sparkles className="w-7 h-7" />,
+      icon: <Sparkles className="w-7 h-7" strokeWidth={2.4} />,
       title: "Советы иммигранту",
       description: "Как перестать бояться говорить и справиться с языковым барьером",
-      color: "from-[#8B6EFE] to-[#FFC58F]",
+      color: "from-[#7A6FFF] to-[#FFBC73]",
     },
     {
-      icon: <Gift className="w-7 h-7" />,
+      icon: <Gift className="w-7 h-7" strokeWidth={2.4} />,
       title: "И это только начало",
       description: "Я постоянно буду добавлять новые блоки и новые полезные темы",
-      color: "from-[#00C48C] to-[#72D8FF]",
+      color: "from-[#26C98F] to-[#57D2C5]",
     },
   ];
 
@@ -135,7 +135,7 @@ function FeatureCard({ feature, index, isInView }: FeatureCardProps) {
       }}
       className="group relative p-10 bg-white rounded-[40px] shadow-[6px_6px_12px_rgba(163,177,198,0.25),-6px_-6px_23.9px_rgba(255,255,255,0.25),inset_-1px_-1px_4px_rgba(0,0,0,0.25),inset_-2px_3px_1.5px_rgba(255,255,255,0.70)] hover:shadow-[8px_8px_16px_rgba(163,177,198,0.28),-8px_-8px_28px_rgba(255,255,255,0.28),inset_-1px_-1px_4px_rgba(0,0,0,0.25),inset_-2px_3px_1.5px_rgba(255,255,255,0.70)] transition-[box-shadow] duration-200 ease-out flex flex-col items-center text-center will-change-transform"
     >
-      <div className={`w-16 h-16 flex items-center justify-center rounded-[24px] bg-gradient-to-br ${feature.color} text-white mb-8 group-hover:scale-110 transition-transform duration-200 ease-out`}>
+      <div className={`mb-8 flex h-[72px] w-[72px] items-center justify-center rounded-[24px] bg-gradient-to-br ${feature.color} text-white shadow-[0_16px_28px_rgba(32,50,74,0.14)] group-hover:scale-110 transition-transform duration-200 ease-out`}>
         {feature.icon}
       </div>
 

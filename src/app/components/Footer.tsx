@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="py-16 px-6 bg-gradient-to-b from-white to-[#F7F9FC] border-t border-[#EEF2F6]">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid md:grid-cols-[2fr_1fr_1fr] gap-12 mb-12">
+        <div className="grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr] mb-12">
           {/* Left: Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -58,6 +58,14 @@ export function Footer() {
                 Google Play
               </motion.a>
             </div>
+          </div>
+
+          <div>
+            <h4 className="mb-4 font-bold text-[#1E2430]">Документы</h4>
+            <nav className="space-y-3">
+              <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
+              <FooterLink href="/terms-of-use">Terms of Use</FooterLink>
+            </nav>
           </div>
         </div>
 

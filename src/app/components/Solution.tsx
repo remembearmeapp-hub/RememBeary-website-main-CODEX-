@@ -71,7 +71,10 @@ export function Solution() {
                   transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
                   className="relative rounded-[42px] border border-white/90 bg-white/96 px-10 py-7 shadow-[0_24px_54px_-24px_rgba(32,50,74,0.24)]"
                 >
-                  <div className="absolute bottom-[-10px] left-[80px] h-6 w-11 rounded-b-[18px] rounded-t-[6px] rotate-[-18deg] bg-white shadow-[0_14px_28px_-22px_rgba(32,50,74,0.18)]" />
+                  <div
+                    className="absolute bottom-[-18px] left-[64px] h-10 w-7 rotate-[42deg] bg-white shadow-[0_14px_28px_-22px_rgba(32,50,74,0.18)]"
+                    style={{ clipPath: "polygon(50% 100%, 0 0, 100% 18%)" }}
+                  />
                   <div className="absolute bottom-[8px] left-[58px] h-4 w-4 rounded-full bg-white" />
                   <span className="relative z-10 text-[19px] font-bold leading-tight text-[#2F3446]">
                     “А как бы ты это сказал
@@ -80,15 +83,6 @@ export function Solution() {
                   </span>
                 </motion.div>
               </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: -6 }}
-              animate={isInView ? { opacity: 1, y: 0, rotate: -6 } : {}}
-              transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute bottom-16 right-2 rounded-[18px] border border-white/80 bg-[#E9F5FF]/90 px-5 py-3 shadow-[0_16px_34px_-24px_rgba(73,145,220,0.35)] backdrop-blur-sm"
-            >
-              <span className="text-sm font-bold tracking-[0.06em] text-[#6CB2F4]">LISTENING...</span>
             </motion.div>
 
           </motion.div>
@@ -120,15 +114,19 @@ export function Solution() {
 
               <div className="max-w-[620px] space-y-6 text-lg font-normal leading-relaxed text-[#667085]">
                 <p>
-                  RememBeary — это не очередное приложение. Это как будто твой{" "}
-                  <span className="font-bold text-[#1E2430]">персональный англоязычный друг</span>, который всегда
-                  рядом и постоянно спрашивает:{" "}
-                  <span className="font-bold text-[#1E2430]">«А как бы ты это сказал по-английски?»</span>
+                  RememBeary — это не очередное приложение, где ты просто нажимаешь кнопки и проходишь упражнения.
                 </p>
 
                 <p>
-                  Ты отвечаешь. Он поправляет. Ты повторяешь. И так —{" "}
-                  <span className="font-bold text-[#15D38A]">без стресса</span>, без оценок, без давления.
+                  Это как будто твой <span className="font-bold text-[#1E2430]">личный англоязычный друг</span>,
+                  который всегда рядом и постоянно спрашивает:{" "}
+                  <span className="font-bold text-[#1E2430]">«А как бы ты это сказал по-английски?»</span> Ты
+                  пробуешь ответить. Он подсказывает правильный вариант. Ты повторяешь.
+                </p>
+
+                <p>
+                  И так шаг за шагом речь начинает складываться сама.{" "}
+                  <span className="font-bold text-[#15D38A]">Без стресса.</span> Без оценок. Без давления.
                 </p>
               </div>
             </div>

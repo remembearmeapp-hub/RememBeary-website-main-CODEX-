@@ -77,9 +77,13 @@ export function Hero() {
           >
             <motion.a
               href="#download"
-              whileHover={{ scale: 1.05, boxShadow: "0 12px 40px rgba(71, 184, 245, 0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "10px 10px 22px rgba(71,95,133,0.30), -10px -10px 30px rgba(255,255,255,0.10), inset -1px -1px 4px rgba(26,40,61,0.34), inset -2px 3px 1.5px rgba(255,255,255,0.18)" }}
               whileTap={{ scale: 0.95 }}
-              className="w-[260px] py-[18px] bg-gradient-to-r from-[#72D8FF] to-[#5A8BFF] text-white rounded-full font-bold text-lg shadow-[0_8px_32px_rgba(71,184,245,0.35)] transition-all duration-300 text-center"
+              className="w-[260px] py-[18px] bg-[linear-gradient(135deg,#71CFFF_0%,#5D9CFF_52%,#4F84EA_100%)] text-white rounded-full font-bold text-lg shadow-[8px_8px_18px_rgba(71,95,133,0.26),-8px_-8px_28px_rgba(255,255,255,0.08),inset_-1px_-1px_4px_rgba(26,40,61,0.34),inset_-2px_3px_1.5px_rgba(255,255,255,0.16)] border border-[rgba(255,255,255,0.12)] transition-all duration-300 text-center"
+              style={{
+                boxShadow:
+                  "8px 8px 18px rgba(71,95,133,0.26), -8px -8px 28px rgba(255,255,255,0.08), inset -1px -1px 4px rgba(26,40,61,0.34), inset -2px 3px 1.5px rgba(255,255,255,0.16)",
+              }}
             >
               Скачать приложение
             </motion.a>
@@ -87,7 +91,7 @@ export function Hero() {
               href="#try"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-[260px] py-[18px] bg-white text-[#47B8F5] rounded-full font-bold text-lg shadow-[0_4px_20px_rgba(32,50,74,0.15)] border border-[#47B8F5]/20 transition-all duration-300 text-center"
+              className="w-[260px] py-[18px] bg-white text-[#47B8F5] rounded-full font-bold text-lg shadow-[6px_6px_12px_rgba(163,177,198,0.25),-6px_-6px_23.9px_rgba(255,255,255,0.25),inset_-1px_-1px_4px_rgba(0,0,0,0.25),inset_-2px_3px_1.5px_rgba(255,255,255,0.70)] transition-all duration-300 text-center"
             >
               Попробовать бесплатно
             </motion.a>

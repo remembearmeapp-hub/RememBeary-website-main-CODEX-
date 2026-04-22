@@ -96,7 +96,7 @@ function AudienceBubble({
 }) {
   return (
     <div
-      className="flex w-full max-w-[490px] items-center gap-4 rounded-full bg-white px-6 py-5 shadow-[6px_6px_12px_rgba(163,177,198,0.16),-6px_-6px_18px_rgba(255,255,255,0.20),inset_-1px_-1px_3px_rgba(0,0,0,0.10),inset_-2px_3px_1.5px_rgba(255,255,255,0.28)]"
+      className="flex w-full max-w-[490px] items-center gap-4 rounded-full bg-white px-6 py-5 shadow-[6px_6px_12px_rgba(163,177,198,0.25),-6px_-6px_23.9px_rgba(255,255,255,0.25),inset_-1px_-1px_4px_rgba(0,0,0,0.25),inset_-2px_3px_1.5px_rgba(255,255,255,0.70)]"
     >
       <div
         className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${color} text-white shadow-[0_12px_22px_rgba(32,50,74,0.10)]`}

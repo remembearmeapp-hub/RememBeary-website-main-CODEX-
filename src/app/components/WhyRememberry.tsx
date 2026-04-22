@@ -85,10 +85,10 @@ export function WhyRememberry() {
                     <div className="grid gap-x-7 gap-y-3 pt-1 sm:grid-cols-2">
                       {point.items.map((item) => (
                         <div key={item} className="flex items-center gap-3">
-                          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#34D399] text-white shadow-[0_8px_18px_rgba(52,211,153,0.18)]">
-                            <Check className="h-4 w-4 stroke-[3]" />
+                          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-[2px] border-[#22C55E] text-[#22C55E]">
+                            <Check className="h-4 w-4 stroke-[2.4]" />
                           </div>
-                          <span className="text-[18px] font-medium leading-snug text-[#4B5565]">{item}</span>
+                          <span className="text-[17px] font-medium leading-snug text-[#667085]">{item}</span>
                         </div>
                       ))}
                     </div>

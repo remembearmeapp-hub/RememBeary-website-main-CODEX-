@@ -29,13 +29,13 @@ export function MethodPhilosophy() {
           </div>
 
           <h2 className="mx-auto max-w-[780px] text-[38px] font-extrabold leading-[1.08] text-[#1E2430] md:text-[56px]">
-            Я сделал это
+            Я делал это приложение
             <span className="bg-gradient-to-r from-[#B9A7FF] to-[#47B8F5] bg-clip-text text-transparent">
               {" "}
               для себя…
             </span>
             <br />
-            и теперь для тебя
+            а теперь и для тебя
           </h2>
 
           <div className="relative mx-auto mt-10 max-w-[800px] rounded-[36px] bg-white px-8 py-7 pl-16 text-left shadow-[6px_6px_12px_rgba(163,177,198,0.16),-6px_-6px_23.9px_rgba(255,255,255,0.22),inset_-1px_-1px_4px_rgba(0,0,0,0.10),inset_-2px_3px_1.5px_rgba(255,255,255,0.34)] md:px-10 md:py-8 md:pl-[72px]">

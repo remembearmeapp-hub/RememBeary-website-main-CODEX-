@@ -9,7 +9,7 @@ export function Header() {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[1200px]"
     >
-      <div className="rounded-full bg-white/68 backdrop-blur-2xl px-6 py-2 shadow-[0_28px_72px_-24px_rgba(32,50,74,0.4),0_14px_32px_-20px_rgba(71,184,245,0.36)]">
+      <div className="rounded-full bg-white/78 backdrop-blur-2xl px-6 py-2 shadow-[0_22px_54px_-24px_rgba(32,50,74,0.34),0_12px_28px_-20px_rgba(71,184,245,0.24)]">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
             <img src={Logo} alt="RememBeary" className="w-[68px] h-[68px] -ml-[15px]" />
@@ -38,9 +38,13 @@ export function Header() {
 
           <motion.a
             href="#download"
-            whileHover={{ scale: 1.05, boxShadow: "0 8px 32px rgba(71, 184, 245, 0.4)" }}
+            whileHover={{ scale: 1.05, boxShadow: "10px 10px 22px rgba(71,95,133,0.30), -10px -10px 30px rgba(255,255,255,0.10), inset -1px -1px 4px rgba(26,40,61,0.34), inset -2px 3px 1.5px rgba(255,255,255,0.18)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-gradient-to-r from-[#72D8FF] to-[#5A8BFF] text-white rounded-full font-semibold shadow-[0_4px_20px_rgba(71,184,245,0.3)] transition-all duration-300"
+            className="px-6 py-3 bg-[linear-gradient(135deg,#71CFFF_0%,#5D9CFF_52%,#4F84EA_100%)] text-white rounded-full font-semibold shadow-[8px_8px_18px_rgba(71,95,133,0.26),-8px_-8px_28px_rgba(255,255,255,0.08),inset_-1px_-1px_4px_rgba(26,40,61,0.34),inset_-2px_3px_1.5px_rgba(255,255,255,0.16)] border border-[rgba(255,255,255,0.12)] transition-all duration-300"
+            style={{
+              boxShadow:
+                "8px 8px 18px rgba(71,95,133,0.26), -8px -8px 28px rgba(255,255,255,0.08), inset -1px -1px 4px rgba(26,40,61,0.34), inset -2px 3px 1.5px rgba(255,255,255,0.16)",
+            }}
           >
             Скачать
           </motion.a>
