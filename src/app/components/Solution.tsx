@@ -38,7 +38,7 @@ export function Solution() {
         <div className="absolute right-0 top-1/4 h-[520px] w-[520px] translate-x-1/3 rounded-full bg-[#B9A7FF]/8 blur-[120px]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1380px]">
+      <div className="relative mx-auto max-w-[1380px] lg:translate-x-[100px]">
         <div className="grid items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] xl:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -40, scale: 0.94 }}
@@ -58,7 +58,7 @@ export function Solution() {
               <img
                 src={BearStudyFriend}
                 alt="RememBeary bear"
-                className="w-[790px] max-w-none drop-shadow-[0_2px_2px_rgba(69,88,120,0.22)] drop-shadow-[0_8px_14px_rgba(69,88,120,0.16)]"
+                className="w-[790px] max-w-none lg:-translate-x-[70px] drop-shadow-[0_2px_2px_rgba(69,88,120,0.22)] drop-shadow-[0_8px_14px_rgba(69,88,120,0.16)]"
               />
               <motion.div
                 initial={{ opacity: 0, y: -16, rotate: 2 }}

@@ -73,7 +73,7 @@ export function WhatsInside() {
         <div className="absolute bottom-1/4 -right-40 h-[600px] w-[600px] rounded-full bg-[#5A8BFF]/5 blur-[120px]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1300px]">
+      <div className="relative mx-auto max-w-[1300px] lg:translate-x-[50px]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

@@ -42,7 +42,7 @@ export function ProgramPrinciples() {
         <div className="absolute right-[-180px] top-[260px] h-[380px] w-[380px] rounded-full bg-[#B9A7FF]/7 blur-[120px]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px]">
+      <div className="relative mx-auto max-w-[1280px] lg:translate-x-[40px]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

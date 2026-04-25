@@ -2,9 +2,17 @@ import { motion } from "motion/react";
 import { Headphones, MessageCircle, Play, Sparkles } from "lucide-react";
 import AppScreen from "../../imports/App_screenshots_1.png";
 
-export function Hero() {
+interface HeroProps {
+  compactDesktop?: boolean;
+}
+
+export function Hero({ compactDesktop = false }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 px-6">
+    <section
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden px-6 ${
+        compactDesktop ? "pt-28 pb-16" : "pt-32 pb-20"
+      }`}
+    >
       {/* Blurred gradient backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -21,9 +29,13 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative max-w-[1400px] w-full grid md:grid-cols-2 gap-12 items-center">
+      <div
+        className={`relative max-w-[1400px] w-full grid md:grid-cols-2 items-center lg:translate-x-[100px] ${
+          compactDesktop ? "gap-10" : "gap-12"
+        }`}
+      >
         {/* Left: Text Content */}
-        <div className="space-y-8">
+        <div className={compactDesktop ? "space-y-6" : "space-y-8"}>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -41,7 +53,9 @@ export function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-6xl font-extrabold leading-tight text-[#1E2430]"
+            className={`font-extrabold text-[#1E2430] ${
+              compactDesktop ? "text-5xl md:text-[3.35rem] leading-[1.02]" : "text-5xl md:text-6xl leading-tight"
+            }`}
           >
             RememBeary — учи английский{" "}
             <span className="bg-gradient-to-r from-[#72D8FF] to-[#5A8BFF] bg-clip-text text-transparent">
@@ -53,7 +67,9 @@ export function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg text-[#667085] leading-relaxed max-w-[600px] space-y-4"
+            className={`text-lg text-[#667085] leading-relaxed max-w-[600px] ${
+              compactDesktop ? "space-y-3" : "space-y-4"
+            }`}
           >
             <p>
               RememBeary — это первый тренажёр, который работает по тому же принципу, по которому маленькие дети учат свой родной язык — через повторение и подражание.
@@ -73,7 +89,7 @@ export function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap gap-4"
+            className={`flex flex-wrap ${compactDesktop ? "gap-3" : "gap-4"}`}
           >
             <motion.a
               href="#download"
@@ -120,38 +136,40 @@ export function Hero() {
             <motion.img
               src={AppScreen}
               alt="RememBeary App"
-              className="w-full max-w-[320px] drop-shadow-[0_20px_60px_rgba(32,50,74,0.3)]"
+              className={`w-full drop-shadow-[0_20px_60px_rgba(32,50,74,0.3)] ${
+                compactDesktop ? "max-w-[300px]" : "max-w-[320px]"
+              }`}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
 
           {/* Floating Decorative Elements */}
-          <FloatingElement delay={0.8} x={-210} y={-90} rotate={-15}>
+          <FloatingElement delay={0.8} x={compactDesktop ? -195 : -210} y={compactDesktop ? -80 : -90} rotate={-15}>
             <div className="p-4 bg-white rounded-2xl shadow-[0_8px_32px_rgba(32,50,74,0.2)]">
               <Headphones className="w-6 h-6 text-[#47B8F5]" />
             </div>
           </FloatingElement>
 
-          <FloatingElement delay={1} x={210} y={-130} rotate={12}>
+          <FloatingElement delay={1} x={compactDesktop ? 194 : 210} y={compactDesktop ? -116 : -130} rotate={12}>
             <div className="p-4 bg-white rounded-2xl shadow-[0_8px_32px_rgba(32,50,74,0.2)]">
               <MessageCircle className="w-6 h-6 text-[#B9A7FF]" />
             </div>
           </FloatingElement>
 
-          <FloatingElement delay={1.2} x={-210} y={170} rotate={8}>
+          <FloatingElement delay={1.2} x={compactDesktop ? -196 : -210} y={compactDesktop ? 148 : 170} rotate={8}>
             <div className="p-4 bg-gradient-to-br from-[#15D38A] to-[#72D8FF] rounded-2xl shadow-[0_8px_32px_rgba(21,211,138,0.3)]">
               <Play className="w-6 h-6 text-white" />
             </div>
           </FloatingElement>
 
-          <FloatingElement delay={1.4} x={140} y={240} rotate={0}>
+          <FloatingElement delay={1.4} x={compactDesktop ? 128 : 140} y={compactDesktop ? 212 : 240} rotate={0}>
             <div className="px-5 py-3 bg-gradient-to-r from-[#15D38A] to-[#47B8F5] rounded-2xl shadow-[0_12px_40px_rgba(21,211,138,0.4)]">
               <span className="text-sm font-bold text-white">+5 уроков бесплатно</span>
             </div>
           </FloatingElement>
 
-          <FloatingElement delay={1.6} x={200} y={60} rotate={5}>
+          <FloatingElement delay={1.6} x={compactDesktop ? 186 : 200} y={compactDesktop ? 48 : 60} rotate={5}>
             <div className="w-12 h-12 bg-gradient-to-br from-[#FF5C77] to-[#FFC58F] rounded-full shadow-[0_8px_24px_rgba(255,92,119,0.3)]" />
           </FloatingElement>
         </motion.div>

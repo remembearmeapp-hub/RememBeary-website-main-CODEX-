@@ -15,7 +15,7 @@ export function Problem() {
         <div className="absolute top-1/3 right-1/4 translate-x-1/2 w-[600px] h-[600px] bg-[#72D8FF]/7 rounded-full blur-[120px]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1120px]">
+      <div className="relative mx-auto max-w-[1120px] lg:translate-x-[-40px]">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_440px] lg:items-start xl:gap-14">
           <motion.div
             initial={{ opacity: 0, x: -40 }}

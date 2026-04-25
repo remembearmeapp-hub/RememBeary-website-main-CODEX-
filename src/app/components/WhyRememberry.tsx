@@ -46,7 +46,7 @@ export function WhyRememberry() {
         <div className="absolute right-[-180px] bottom-[80px] h-[380px] w-[380px] rounded-full bg-[#15D38A]/7 blur-[120px]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1240px]">
+      <div className="relative mx-auto max-w-[1240px] lg:translate-x-[20px]">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
