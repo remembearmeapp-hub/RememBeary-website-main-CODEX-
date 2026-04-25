@@ -112,7 +112,7 @@ export function Solution() {
                 </span>
               </h2>
 
-              <div className="max-w-[620px] min-w-0 space-y-6 text-lg font-normal leading-relaxed text-[#667085]">
+              <div className="max-w-[620px] min-w-0 space-y-6 overflow-hidden text-lg font-normal leading-relaxed text-[#667085] [overflow-wrap:anywhere] lg:overflow-visible lg:[overflow-wrap:normal]">
                 <p>
                   RememBeary — это не очередное приложение, где ты просто нажимаешь кнопки и проходишь упражнения.
                 </p>
@@ -131,17 +131,17 @@ export function Solution() {
               </div>
             </div>
 
-            <div className="grid max-w-[620px] grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="grid w-full max-w-[620px] grid-cols-3 gap-2 sm:gap-4">
               {cueCards.map((card, index) => (
                 <motion.div
                   key={card.label}
                   initial={{ opacity: 0, y: 18 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.55, delay: 0.15 + index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                  className={`flex w-full flex-col items-center justify-center rounded-[40px] bg-gradient-to-br ${card.tint} px-6 py-8 text-center shadow-[6px_6px_12px_rgba(163,177,198,0.25),-6px_-6px_23.9px_rgba(255,255,255,0.25),inset_-1px_-1px_4px_rgba(0,0,0,0.25),inset_-2px_3px_1.5px_rgba(255,255,255,0.70)]`}
+                  className={`flex w-full flex-col items-center justify-center rounded-[28px] bg-gradient-to-br ${card.tint} px-2 py-5 text-center shadow-[6px_6px_12px_rgba(163,177,198,0.25),-6px_-6px_23.9px_rgba(255,255,255,0.25),inset_-1px_-1px_4px_rgba(0,0,0,0.25),inset_-2px_3px_1.5px_rgba(255,255,255,0.70)] sm:rounded-[40px] sm:px-6 sm:py-8`}
                 >
-                  <div className={`${card.iconColor} mb-4`}>{card.icon}</div>
-                  <span className={`text-sm font-extrabold tracking-[0.08em] ${card.textColor}`}>{card.label}</span>
+                  <div className={`${card.iconColor} mb-3 sm:mb-4`}>{card.icon}</div>
+                  <span className={`text-[11px] font-extrabold tracking-[0.04em] ${card.textColor} sm:text-sm sm:tracking-[0.08em]`}>{card.label}</span>
                 </motion.div>
               ))}
             </div>
