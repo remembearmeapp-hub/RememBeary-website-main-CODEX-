@@ -58,7 +58,7 @@ export function Solution() {
               <img
                 src={BearStudyFriend}
                 alt="RememBeary bear"
-                className="w-[790px] max-w-none lg:-translate-x-[70px] drop-shadow-[0_2px_2px_rgba(69,88,120,0.22)] drop-shadow-[0_8px_14px_rgba(69,88,120,0.16)]"
+                className="w-full max-w-[360px] lg:w-[790px] lg:max-w-none lg:-translate-x-[70px] drop-shadow-[0_2px_2px_rgba(69,88,120,0.22)] drop-shadow-[0_8px_14px_rgba(69,88,120,0.16)]"
               />
               <motion.div
                 initial={{ opacity: 0, y: -16, rotate: 2 }}
@@ -112,7 +112,7 @@ export function Solution() {
                 </span>
               </h2>
 
-              <div className="max-w-[620px] min-w-0 space-y-6 overflow-hidden text-lg font-normal leading-relaxed text-[#667085] [overflow-wrap:anywhere] lg:overflow-visible lg:[overflow-wrap:normal]">
+              <div className="max-w-[620px] min-w-0 space-y-6 text-lg font-normal leading-relaxed text-[#667085]">
                 <p>
                   RememBeary — это не очередное приложение, где ты просто нажимаешь кнопки и проходишь упражнения.
                 </p>
