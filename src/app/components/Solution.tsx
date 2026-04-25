@@ -1,11 +1,25 @@
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Headphones, Brain, Mic, MessageCircle } from "lucide-react";
 import BearStudyFriend from "../../imports/Bear_StudyFriend_Clean.png";
 
 export function Solution() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const updateIsMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", updateIsMobile);
+    };
+  }, []);
 
   const cueCards = [
     {
@@ -51,8 +65,8 @@ export function Solution() {
             </div>
 
             <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 4.4, repeat: Infinity, ease: "easeInOut" }}
+              animate={isMobile ? undefined : { y: [0, -12, 0] }}
+              transition={isMobile ? undefined : { duration: 4.4, repeat: Infinity, ease: "easeInOut" }}
               className="relative z-10 lg:translate-x-8 lg:scale-[1.06]"
             >
               <img
