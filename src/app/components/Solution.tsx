@@ -44,7 +44,7 @@ export function Solution() {
             initial={{ opacity: 0, x: -40, scale: 0.94 }}
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="relative order-2 flex min-h-[600px] items-center justify-center overflow-visible lg:order-2"
+            className="relative order-1 flex min-h-[600px] items-center justify-center overflow-visible lg:order-2"
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="h-[440px] w-[440px] rounded-full bg-white/60 blur-[105px]" />
@@ -91,7 +91,7 @@ export function Solution() {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-            className="order-1 min-w-0 space-y-8 lg:order-1"
+            className="order-2 min-w-0 space-y-8 lg:order-1"
           >
             <div className="space-y-6">
               <motion.div
