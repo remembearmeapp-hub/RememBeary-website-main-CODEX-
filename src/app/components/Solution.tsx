@@ -39,7 +39,7 @@ export function Solution() {
       </div>
 
       <div className="relative mx-auto max-w-[1380px] lg:translate-x-[100px]">
-        <div className="grid items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] xl:gap-12">
+        <div className="grid min-w-0 items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] xl:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -40, scale: 0.94 }}
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
@@ -91,7 +91,7 @@ export function Solution() {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-            className="order-1 space-y-8 lg:order-1"
+            className="order-1 min-w-0 space-y-8 lg:order-1"
           >
             <div className="space-y-6">
               <motion.div
@@ -112,7 +112,7 @@ export function Solution() {
                 </span>
               </h2>
 
-              <div className="max-w-[620px] space-y-6 text-lg font-normal leading-relaxed text-[#667085]">
+              <div className="max-w-[620px] min-w-0 space-y-6 text-lg font-normal leading-relaxed text-[#667085]">
                 <p>
                   RememBeary — это не очередное приложение, где ты просто нажимаешь кнопки и проходишь упражнения.
                 </p>
@@ -131,7 +131,7 @@ export function Solution() {
               </div>
             </div>
 
-            <div className="grid max-w-[620px] grid-cols-3 gap-4">
+            <div className="grid max-w-[620px] grid-cols-1 gap-4 sm:grid-cols-3">
               {cueCards.map((card, index) => (
                 <motion.div
                   key={card.label}
