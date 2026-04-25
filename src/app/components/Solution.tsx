@@ -44,7 +44,7 @@ export function Solution() {
             initial={{ opacity: 0, x: -40, scale: 0.94 }}
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="relative order-1 flex min-h-[600px] items-center justify-center overflow-visible lg:order-2"
+            className="relative order-1 flex min-h-[460px] items-end justify-center overflow-visible pb-6 lg:order-2 lg:min-h-[600px] lg:items-center lg:pb-0"
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="h-[440px] w-[440px] rounded-full bg-white/60 blur-[105px]" />
@@ -58,25 +58,25 @@ export function Solution() {
               <img
                 src={BearStudyFriend}
                 alt="RememBeary bear"
-                className="w-full max-w-[360px] lg:w-[790px] lg:max-w-none lg:-translate-x-[70px] drop-shadow-[0_2px_2px_rgba(69,88,120,0.22)] drop-shadow-[0_8px_14px_rgba(69,88,120,0.16)]"
+                className="w-full max-w-[390px] lg:w-[790px] lg:max-w-none lg:-translate-x-[70px] drop-shadow-[0_2px_2px_rgba(69,88,120,0.22)] drop-shadow-[0_8px_14px_rgba(69,88,120,0.16)]"
               />
               <motion.div
                 initial={{ opacity: 0, y: -16, rotate: 2 }}
                 animate={isInView ? { opacity: 1, y: 0, rotate: 2 } : {}}
                 transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute right-[-10px] top-[-34px]"
+                className="absolute left-1/2 top-[-82px] w-[320px] -translate-x-1/2 lg:left-auto lg:right-[-10px] lg:top-[-34px] lg:w-auto lg:translate-x-0"
               >
                 <motion.div
                   animate={{ rotate: [2, 1.5, 2] }}
                   transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative rounded-[42px] border border-white/90 bg-white/96 px-10 py-7 shadow-[0_24px_54px_-24px_rgba(32,50,74,0.24)]"
+                  className="relative rounded-[32px] border border-white/90 bg-white/96 px-6 py-4 shadow-[0_24px_54px_-24px_rgba(32,50,74,0.24)] lg:rounded-[42px] lg:px-10 lg:py-7"
                 >
                   <div
                     className="absolute bottom-[-18px] left-[64px] h-10 w-7 rotate-[42deg] bg-white shadow-[0_14px_28px_-22px_rgba(32,50,74,0.18)]"
                     style={{ clipPath: "polygon(50% 100%, 0 0, 100% 18%)" }}
                   />
                   <div className="absolute bottom-[8px] left-[58px] h-4 w-4 rounded-full bg-white" />
-                  <span className="relative z-10 text-[19px] font-bold leading-tight text-[#2F3446]">
+                  <span className="relative z-10 text-[16px] font-bold leading-tight text-[#2F3446] lg:text-[19px]">
                     “А как бы ты это сказал
                     <br />
                     по-английски?”
