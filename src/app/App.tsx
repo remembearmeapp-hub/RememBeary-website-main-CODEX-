@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { MotionConfig } from "motion/react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Problem } from "./components/Problem";
@@ -95,6 +96,7 @@ export default function App() {
   }
 
   const shouldScaleDesktop = desktopViewport.isDesktop && desktopViewport.scale < 1;
+  const shouldReduceMotion = !desktopViewport.isDesktop;
   const scaledContentTopOffset = shouldScaleDesktop ? Math.round(32 / desktopViewport.scale) : 0;
   const desktopViewportStyle = shouldScaleDesktop
     ? {
@@ -134,17 +136,19 @@ export default function App() {
   );
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#EEF2F6]">
-      <Header />
-      <div className={shouldScaleDesktop ? "mx-auto flex justify-center" : undefined} style={desktopViewportStyle}>
-        {shouldScaleDesktop ? (
-          <div style={desktopCanvasStyle}>
-            <div style={desktopContentStyle}>{pageContent}</div>
-          </div>
-        ) : (
-          pageContent
-        )}
+    <MotionConfig reducedMotion={shouldReduceMotion ? "always" : "never"}>
+      <div className="min-h-screen overflow-x-hidden bg-[#EEF2F6]">
+        <Header />
+        <div className={shouldScaleDesktop ? "mx-auto flex justify-center" : undefined} style={desktopViewportStyle}>
+          {shouldScaleDesktop ? (
+            <div style={desktopCanvasStyle}>
+              <div style={desktopContentStyle}>{pageContent}</div>
+            </div>
+          ) : (
+            pageContent
+          )}
+        </div>
       </div>
-    </div>
+    </MotionConfig>
   );
 }
